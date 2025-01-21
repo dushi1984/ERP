@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام ERP لشركة مقاولات</title>
+	 <link rel="stylesheet" href="styles.css">
+ <body>
+
+    <div class="sidebar">
+        <h2>نظام ERP</h2>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="toggleSection('projects')">إدارة المشاريع</a></li>
+            <li><a href="javascript:void(0)" onclick="toggleSection('materials')">إدارة المواد الخام</a></li>
+            <li><a href="javascript:void(0)" onclick="toggleSection('equipment')">إدارة المعدات</a></li>
+            <li><a href="javascript:void(0)" onclick="toggleSection('accounts')">الحسابات والماليات</a></li>
+            <li><a href="javascript:void(0)" onclick="toggleSection('statements')">المستخلصات</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <!-- إدارة المشاريع -->
+        <section id="projects" class="hidden">
+            <h2>إدارة المشاريع</h2>
+            <button onclick="addProject()">إضافة مشروع جديد</button>
+            <button onclick="saveProjects()">حفظ البيانات</button>
+            <table id="projectsTable">
+                <tr>
+                    <th>الموقع</th>
+                    <th>المشرف</th>
+                    <th>عدد الأفراد</th>
+                    <th>نسبة التقدم</th>
+                    <th>المكسب الحالي</th>
+                    <th>التحرير</th>
+                </tr>
+            </table>
+        </section>
+
+        <!-- إدارة المواد الخام -->
+		
+<section id="materials" class="hidden">
+    <h2>إدارة المواد الخام</h2>
+	<div>
+    <label for="supplierFilter">فلتر المورد:</label>
+    <select id="supplierFilter" onchange="filterBySupplier()">
+        <option value="">اختر المورد</option>
+    </select>
+</div>
+
+    <button onclick="addMaterial()">إضافة مادة خام جديدة</button>
+    <button onclick="saveMaterials()">حفظ البيانات</button>
+    <table id="materialsTable">
+        <tr>
+            <th>المادة الخام</th>
+            <th>المورد</th>
+            <th>الكمية</th>
+            <th>السعر الوحدة</th>
+            <th>السعر الإجمالي</th>
+            <th>التحرير</th>
+        </tr>
+    </table>
+</section>
+
+
+        <!-- إدارة المعدات -->
+        <section id="equipment" class="hidden">
+            <h2>إدارة المعدات</h2>
+            <button onclick="addEquipment()">إضافة معدات جديدة</button>
+            <button onclick="saveEquipment()">حفظ البيانات</button>
+            <table id="equipmentTable">
+                <tr>
+                    <th>المعدة</th>
+                    <th>الحالة</th>
+                    <th>المؤجر</th>
+                    <th>التحرير</th>
+                </tr>
+            </table>
+        </section>
+
+        <!-- الحسابات والماليات -->
+        <section id="accounts" class="hidden">
+            <h2>الحسابات والماليات</h2>
+            <button onclick="addAccount()">إضافة حساب جديد</button>
+            <button onclick="saveAccounts()">حفظ البيانات</button>
+            <table id="accountsTable">
+                <tr>
+                    <th>الوصف</th>
+                    <th>المبلغ</th>
+                    <th>النوع</th>
+                    <th>التحرير</th>
+                </tr>
+            </table>
+        </section>
+
+        <!-- المستخلصات -->
+        <section id="statements" class="hidden">
+            <h2>المستخلصات</h2>
+            <p>تفاصيل المستخلصات التي تم إنجازها...</p>
+        </section>
+   </div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+ <footer>
+        <p>&copy; 2025 مقاولات دوشي. جميع الحقوق محفوظة.</p>
+    </footer>
+</html>
