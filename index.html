@@ -53,7 +53,37 @@
             </section>
 
             <!-- باقي الأقسام كما هي ... -->
+<!-- إدارة المعدات -->
+<section id="equipment" class="hidden">
+    <h2>إدارة المعدات</h2>
+    <button onclick="addEquipment()">إضافة معدة جديدة</button>
+    <button onclick="saveEquipment()">حفظ البيانات</button>
+    <table id="equipmentTable">
+        <tr>
+            <th>اسم المعدة</th>
+            <th>الحالة</th>
+            <th>الموقع</th>
+            <th>تكلفة الإيجار</th>
+            <th>التحرير</th>
+        </tr>
+    </table>
+</section>
 
+<!-- الحسابات والماليات -->
+<section id="accounts" class="hidden">
+    <h2>الحسابات والماليات</h2>
+    <button onclick="addTransaction()">إضافة معاملة جديدة</button>
+    <button onclick="saveAccounts()">حفظ البيانات</button>
+    <table id="accountsTable">
+        <tr>
+            <th>التاريخ</th>
+            <th>الوصف</th>
+            <th>المبلغ</th>
+            <th>النوع (إيراد/مصروف)</th>
+            <th>التحرير</th>
+        </tr>
+    </table>
+</section>
         </div>
 
         <script src="scripts.js"></script>
